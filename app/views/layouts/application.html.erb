@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <% flash.each do |_type, msg| %>
+      <%= msg %>
+    <% end %>
+
+    <%= link_to "Logout", logout_path, data: { "turbo-method": :delete } if current_user.present? %>
+
     <%= yield %>
   </body>
 </html>
