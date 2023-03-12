@@ -11,4 +11,11 @@ Rails.application.routes.draw do
 
   # SESSION AUTH
   resources :vehicles, only: :index
+
+  namespace :api do
+    post '/login', to: 'authentication#create'
+
+    # JWT AUTH
+    resources :houses, only: :index
+  end
 end
