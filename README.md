@@ -1,4 +1,4 @@
-Steps to run:
+## Steps to run
 
 - rvm install 3.1.3
 - bundle install
